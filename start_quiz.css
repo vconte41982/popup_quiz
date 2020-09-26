@@ -1,0 +1,73 @@
+body {
+  color: #a1f0bb;
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #417e55, #68d38b);
+  font-size: 3rem;
+  min-width: 80rem;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #417e55;
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+
+.choice-prefix {
+  padding: 2rem 2.5rem;
+  color: #a1f0bb;
+}
+
+.choice-text {
+  padding: 2rem;
+  width: 100%;
+}
+
+.correct {
+  background: linear-gradient(90deg, #1cbfdb, #e4eee7) 100%;
+}
+
+.incorrect {
+  background: linear-gradient(90deg, #e70404, #e4eee7) 100%;
+}
+/* Quiz Score Display*/
+#qsd {
+  display: flex;
+  justify-content: space-between;
+}
+
+.qsd-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#qsd-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 3rem;
+  border: 0.2rem solid #8ce400;
+  margin-top: 2rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#progressBarFull {
+  height: 100%;
+  background: #8ce400;
+  width: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .choice-container {
+    min-width: 40rem;
+  }
+}

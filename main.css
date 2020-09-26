@@ -1,0 +1,76 @@
+:root {
+  background-color: #68d38b;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 82.5%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 4.3rem;
+  color: #a1f0bb;
+  margin-bottom: 5rem;
+}
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+.btn {
+  font-size: 2.4rem;
+  padding: 2rem 0;
+  width: 30rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #a1f0bb;
+  background: linear-gradient(90deg, #417e55, #68d38b);
+  border-radius: 8px;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #1b3d27;
+  transition: transform 150ms;
+  transform: scale(1.03);
+}
+.btn[disable]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+#highscore-btn:hover {
+  background: linear-gradient(90deg, #68d38b, #417e55) 100%;
+}
+#highscore-btn:hover {
+  box-shadow: 0 0.4rem 1.4rem 0 #417e55;
+}
+.fa-pencil {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+.fa-pencil {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
