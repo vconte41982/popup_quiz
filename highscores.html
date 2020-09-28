@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding Quiz Challenge</title>
+    <title>High Scores</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="highscores.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -14,15 +15,12 @@
   </head>
   <body>
     <div class="container">
-      <div id="home" class="flex-column flex-center">
-        <h1>Coding Quiz Challenge</h1>
-        <a href="/quiz.html" class="btn"
-          >Start Quiz <i class="fas fa-pencil-alt"></i
-        ></a>
-        <a href="/highscores.html" id="highscore-btn" class="btn"
-          >High Scores <i class="fas fa-trophy"></i
-        ></a>
+      <div id="highScore" class="flex-center flex-column">
+        <h1 id="finalScore">Scoreboard</h1>
+        <ul id="highscoreList"></ul>
+        <a href="/" class="btn">Go Home<i class="fas fa-home"></i></a>
       </div>
     </div>
+    <script src="highscores.js"></script>
   </body>
 </html>

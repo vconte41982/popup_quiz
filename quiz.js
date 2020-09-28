@@ -2,7 +2,7 @@ const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progresstext");
 const ScoreText = document.querySelector("#score");
-const progressBarFull = document.querySelector("progressBarFull");
+const progressBarFull = document.querySelector("#progressBarFull");
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -13,37 +13,41 @@ let availableQuestions = [];
 let questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?",
-    choice1: "<script>",
+    choice1: "script",
     choice2: "js",
-    choice3: "<scripting>",
-    choice4: "<javascript>",
+    choice3: "scripting",
+    choice4: "javascript",
     answer: 1,
   },
+
   {
     question: "Where is the correct place to insert JavaScript",
-    choice1: "The <body> section",
-    choice2: "The <head> section",
-    choice3: "<The <p> section",
-    choice4: "<Both the <head> section and the <body> section",
+    choice1: "The body section",
+    choice2: "The head section",
+    choice3: "The p section",
+    choice4: "Both the head section and the body section",
     answer: 4,
   },
+
   {
     question:
       'What is the correct syntax for referring to an external script called "xxx.js"?',
-    choice1: '<script name="xxx.js">',
-    choice2: '<script src="xxx.js">',
-    choice3: '<script href="xxx.js">',
-    choice4: "Both the <head> section and the <body> section",
+    choice1: 'script name="xxx.js"',
+    choice2: 'script src="xxx.js"',
+    choice3: 'script href="xxx.js"',
+    choice4: "Both the head section and the body section",
     answer: 2,
   },
+
   {
     question: 'How do you write "Hello World" in an alert box?',
-    choice1: 'alert("Hello World");>',
-    choice2: 'msg("Hello World)";',
+    choice1: 'alert("Hello World");',
+    choice2: 'msg("Hello World");',
     choice3: 'msgBox("Hello World");>',
     choice4: 'alertBox("Hello World");',
     answer: 1,
   },
+
   {
     question: "How to create a function in JavaScript?",
     choice1: "function = myFunction()",
@@ -52,6 +56,7 @@ let questions = [
     choice4: "function()myFunction",
     answer: 2,
   },
+
   {
     question: "How does a WHILE loop start?",
     choice1: "while (i,<= 10; i++)",
@@ -60,6 +65,7 @@ let questions = [
     choice4: "while (i <= 1)0",
     answer: 3,
   },
+
   {
     question:
       'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
@@ -79,6 +85,7 @@ startQuiz = () => {
   availableQuestions = [...questions];
   getNewQuestion();
 };
+
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
@@ -86,7 +93,7 @@ getNewQuestion = () => {
   }
 
   questionCounter++;
-  progressText.innerText = `Question ${questionCounter} of $(MAX_QUESTIONS)`;
+  progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
   progressBarFull.style.width = `${(questionCounter / Max_QUESTIONS) * 100}%`;
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -117,6 +124,7 @@ choices.forEach((choice) => {
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
+
     setTimeout(() => {
       selectedChoice.parentElement.classList.remove(classToApply);
       getNewQuestion();
@@ -124,7 +132,7 @@ choices.forEach((choice) => {
   });
 });
 
-incrementScore = (num) => {
+incrementScore = function (num) {
   score += num;
   ScoreText.innerText = score;
 };

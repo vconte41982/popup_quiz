@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 82.5%;
+  font-size: 62.5%;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -34,7 +34,17 @@ h2 {
 }
 .flex-center {
   justify-content: center;
+  align-items: center;
 }
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
@@ -46,7 +56,7 @@ h2 {
   margin-bottom: 1rem;
   text-decoration: none;
   color: #a1f0bb;
-  background: linear-gradient(90deg, #417e55, #68d38b);
+  background: linear-gradient(90deg, #417e55, #68d38b) 100%;
   border-radius: 8px;
 }
 .btn:hover {
@@ -73,4 +83,39 @@ h2 {
 .fa-pencil {
   font-size: 2.5rem;
   margin-left: 1rem;
+}
+
+/*End Page Css*/
+.end-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 #417e55;
+}
+input::placeholder {
+  color: #9fe6b6;
+}
+#username {
+  margin-bottom: 3rem;
+  width: 100%;
+  outline: none;
+}
+#end-text {
+  font-size: 2.4rem;
+  color: #a1f0bb;
+  text-align: center;
+}
+.fa-home {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: #a1f0bb;
 }
